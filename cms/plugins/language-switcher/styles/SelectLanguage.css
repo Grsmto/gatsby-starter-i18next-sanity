@@ -1,0 +1,12 @@
+@import "part:@sanity/base/theme/variables-style";
+
+.root {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-right: 1em;
+}
+
+.root :global(select) {
+  min-width: 4rem;
+}

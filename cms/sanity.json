@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "_",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "gatsby-starter-i18next-sanity"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "language-switcher"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "name": "part:language-switcher/config",
+      "path": "./parts/languageSwitcherConfig.js"
+    }
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "__experimental_spaces": [
+    {
+      "name": "production",
+      "title": "Production",
+      "default": true,
+      "api": {
+        "projectId": "_",
+        "dataset": "production"
+      }
+    },
+    {
+      "name": "staging",
+      "title": "Staging",
+      "api": {
+        "projectId": "_",
+        "dataset": "staging"
+      }
+    }
+  ]
+}
